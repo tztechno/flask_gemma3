@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gemma 3n Text App</title>
+</head>
+<body>
+    <h1>Gemma 3n Demo</h1>
+    <input type="text" id="user_input" placeholder="Type something"/>
+    <button onclick="sendRequest()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+    async function sendRequest() {
+        const text = document.getElementById("user_input").value;
+        const res = await fetch("/predict", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({text: text})
+        });
+        const data = await res.json();
+        document.getElementById("output").innerText = data.result;
+    }
+    </script>
+</body>
+</html>
