@@ -4,6 +4,10 @@
 
 ---
 
-
+shun_ishii@shunnoMacBook-puro 10_gemma3n % pip install -r requirements.txt
+WARNING: Ignoring invalid distribution -rllib3 (/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages)
+Requirement already satisfied: flask in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from -r requirements.txt (line 1)) (2.2.5)
+ERROR: Could not find a version that satisfies the requirement gemma3n (from versions: none)
+ERROR: No matching distribution found for gemma3n
 
 ---
